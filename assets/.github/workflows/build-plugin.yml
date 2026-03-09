@@ -3,6 +3,7 @@ name: Build Plugin Zip
 on:
   push:
     branches: [ main ]
+  workflow_dispatch:
 
 jobs:
   build:
@@ -12,10 +13,19 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Create plugin zip
+      - name: Prepare build folder
         run: |
-          mkdir build
-          zip -r build/roxy-arcade.zip . -x "*.git*" ".github/*"
+          mkdir -p build/roxy-arcade
+          rsync -av ./ build/roxy-arcade/ \
+            --exclude='.git*' \
+            --exclude='.github' \
+            --exclude='build' \
+            --exclude='.DS_Store'
+
+      - name: Create zip
+        run: |
+          cd build
+          zip -r roxy-arcade.zip roxy-arcade
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
