@@ -2,12 +2,12 @@
 /**
  * Plugin Name: Roxy Arcade
  * Description: Modular arcade with multiple games, per-game + combined leaderboards, guest play, login-required score saving, and monthly prize via WooCommerce Subscriptions.
- * Version: 0.4.2
+ * Version: 0.4.3
  */
 
 if (!defined('ABSPATH')) exit;
 
-define('ROXY_ARCADE_VERSION', '0.4.2');
+define('ROXY_ARCADE_VERSION', '0.4.3');
 
 require_once __DIR__ . '/includes/class-roxy-arcade-updater.php';
 
