@@ -4,7 +4,7 @@ Tags: arcade, games, leaderboard, theater, woocommerce
 Requires at least: 5.8
 Tested up to: 6.6
 Requires PHP: 7.4
-Stable tag: 0.4.2
+Stable tag: 0.4.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -38,5 +38,5 @@ Roxy Arcade supports:
 
 == Upgrade Notice ==
 
-= 0.4.2 =
+= 0.4.3 =
 Adds GitHub release packaging and auto-update support.
